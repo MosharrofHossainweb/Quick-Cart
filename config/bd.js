@@ -23,7 +23,7 @@ async function connectDB() {
         return mongoose;
       });
   }
-  cashed.conn = await cashed.Promise;
+  cached.conn = await cached.Promise;
   return cached.conn;
 }
 export default connectDB;
