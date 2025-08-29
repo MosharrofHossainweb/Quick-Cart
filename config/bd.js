@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 let cached = global.mongoose;
 if (!cached) {
-  cashed = global.mongoose = {
+  cached = global.mongoose = {
     conn: null,
     Promise: null,
   };

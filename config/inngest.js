@@ -1,5 +1,5 @@
 import { Inngest } from 'inngest';
-import connectDB from './bd';
+import connectDB from './bd.js';
 
 // Create a client to send and receive events
 export const inngest = new Inngest({ id: 'quickcart-next' });
