@@ -1,5 +1,6 @@
 import { Inngest } from 'inngest';
 import connectDB from './bd.js';
+import User from '@/models/User.js';
 
 // Create a client to send and receive events
 export const inngest = new Inngest({ id: 'quickcart-next' });
@@ -52,7 +53,7 @@ export const syncUserDeletion = inngest.createFunction(
     id: 'delete-user-with-clerk',
   },
   {
-    event: 'clerk/user.delete',
+    event: 'clerk/user.deleted',
   },
   async ({ event }) => {
     const { id } = event.data;
